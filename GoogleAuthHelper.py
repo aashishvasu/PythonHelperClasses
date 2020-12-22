@@ -50,7 +50,7 @@ class GoogleAuth:
 		return creds
 
 	def BuildUserService(self, api, apiVersion, oauthCredentials):
-		return build(api, apiVersion, credentials=oauthCredentials)
+		return build(api, apiVersion, credentials=oauthCredentials, cache_discovery=False)
 
 	@staticmethod
 	def AuthenticateGoogle(credentialsFileName, scope):
